@@ -1,1 +1,12 @@
-<h2>Available drones</h2>
+<a href="/" class="link-back">Back</a>
+
+<h2 class="page-title">Available drones</h2>
+<hr/>
+{{#each allDrones}}
+  <div class="drone-box">
+    <h3 class="drone-title">{{name}}</h3>
+    <p class="drone-info">Propeller: {{propellers}}</p>
+    <p class="drone-info">Maximum speed: {{maxSpeed}}</p>
+    <button class="delete-button">Delete</button>
+  </div>
+{{/each}}

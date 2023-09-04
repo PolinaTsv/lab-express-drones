@@ -1,8 +1,72 @@
 body {
   padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f5f5dc;
 }
 
 a {
   color: #00b7ff;
+}
+.titleMain {
+  display: inline-block;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+  padding: 20px;
+}
+.background-container {
+  background-image: url("public/images/drone-picture.jpg"); 
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  height: 400px; 
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+  gap: 20px; 
+  align-items: center;
+  margin: 10px;
+}
+.drone-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.link-back,
+.page-title,
+.drone-box {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  left: 10%;
+  width: 30%;
+  margin-right: 20px;
+}
+.page-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.drone-title {
+  font-size: 1.5rem;
+  margin: 0;
+  margin: 10px;
+}
+
+.drone-info {
+  margin: 10px 0;
+  color: #777;
+}
+
+.delete-button {
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.delete-button:hover {
+  background-color: #cc3700;
 }
