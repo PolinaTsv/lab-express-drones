@@ -14,16 +14,16 @@ a {
   padding: 20px;
 }
 .background-container {
-  background-image: url("public/images/drone-picture.jpg"); 
-  background-size: cover; 
-  background-position: center center; 
-  background-repeat: no-repeat; 
-  height: 400px; 
+  background-image: url("public/images/drone-picture.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 400px;
 }
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
-  gap: 20px; 
+  gap: 20px;
   align-items: center;
   margin: 10px;
 }
@@ -31,6 +31,10 @@ a {
   background-color: #fff;
   border: 1px solid #ccc;
   text-align: center;
+}
+.link-forward {
+  display: inline-block;
+  left: 90%;
 }
 .link-back,
 .page-title,

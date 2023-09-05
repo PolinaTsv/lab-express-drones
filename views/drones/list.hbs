@@ -1,12 +1,32 @@
 <a href="/" class="link-back">Back</a>
-
+{{! <ul>
+  <h3>Show only speed over:</h3>
+  <a href="/drones?maxSpeed=5">5</a>
+  <a href="/drones?maxSpeed=10">10</a>
+  <a href="/drones?maxSpeed=15">15</a>
+</ul> }}
 <h2 class="page-title">Available drones</h2>
-<hr/>
+<hr />
 {{#each allDrones}}
   <div class="drone-box">
     <h3 class="drone-title">{{name}}</h3>
     <p class="drone-info">Propeller: {{propellers}}</p>
     <p class="drone-info">Maximum speed: {{maxSpeed}}</p>
-    <button class="delete-button">Delete</button>
+    {{! link that points to the details page }}
+    <a href="/drones/{{_id}}/edit">Edit</a>
+    {{! add the form to handle the POST request to remove a specific book  }}
+    <form action="/drones/{{_id}}/delete" method="POST">
+        <button class="delete-button" type="submit">Delete</button>
+    </form>
+
   </div>
 {{/each}}
+<hr />
+{{! <form action="/responder" method="POST">
+  <label for="fname">First name:</label><br />
+  <input type="text" id="fname" value="John" /><br /><br />
+  <label for="password">Password:</label><br />
+  <input type="text" id="password" /><br /><br />
+  <input type="submit" value="Submit" />
+</form> }}
+<a href="/drones/create" class="link-forward">Create a new drone</a>

@@ -1,1 +1,22 @@
+<a href="/drones" class="link-back">Back</a>
 <h2>Update the drone</h2>
+<h2>Edit the drone: {{droneToEdit.name}} </h2>
+
+<form action="/drones/{{droneToEdit._id}}/edit" method="post">
+  <label>
+    Name:
+    <input type="text" name="name" value="{{droneToEdit.name}}" />
+  </label>
+
+  <label>
+    Propellers:
+    <input type="number" name="propellers" value="{{droneToEdit.propellers}}" />
+  </label>
+
+  <label>
+    Maximum Speed:
+    <input type="number" name="maxSpeed" value="{{droneToEdit.maxSpeed}}" />
+  </label>
+
+  <button>Save changes</button>
+</form>
